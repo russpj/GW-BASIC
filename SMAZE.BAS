@@ -5,8 +5,8 @@
 40 DEFINT A-Z
 50 DIM W(100, 100), V(100, 100)
 80  ' RN = (TIMER - 12*3600)*3/4
-90 RANDOMIZE
-100 INPUT "What are your width and length"; H, V
+90 RANDOMIZE(TIMER)
+100 INPUT "What are your width and height"; H, V
 102 IF (H <> 1) AND (V <> 1) THEN 110
 104 PRINT "Meaningless dimensions.  Try again" : GOTO 100
 110 FOR I = 1 TO H : FOR J = 1 TO V : W(I,J) = 0 : V(I,J) = 0 : NEXT J : NEXT I
@@ -15,7 +15,7 @@
 135 F$ = "SCRN:"
 155 CLS : PRINT : SCREEN 1
 160 Q = 0 : Z = 0 : X = INT(RND(1)*H + 1)
-162 BOX = 1 : PX = 0 : PY = BOX
+162 BOX = 2 : PX = 0 : PY = BOX
 165 FOR I% = 1 TO H
 170   IF I% = X - 1 THEN 175 ELSE IF (X = 1) AND (I = 1) THEN 173
 171   CO = 3 : GOSUB 5000 : GOSUB 5000 : GOTO 180  '  Write two boxes
