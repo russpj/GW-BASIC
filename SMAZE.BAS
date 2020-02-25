@@ -15,7 +15,7 @@
 135 F$ = "SCRN:"
 155 CLS : PRINT : SCREEN 1
 160 Q = 0 : Z = 0 : X = INT(RND(1)*H + 1)
-162 BOX = 2 : PX = 0 : PY = BOX
+162 BOX = 3 : PX = 0 : PY = BOX
 165 FOR I% = 1 TO H
 170   IF I% = X - 1 THEN 175 ELSE IF (X = 1) AND (I = 1) THEN 173
 171   CO = 3 : GOSUB 5000 : GOSUB 5000 : GOTO 180  '  Write two boxes
